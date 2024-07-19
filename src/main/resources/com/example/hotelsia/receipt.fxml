@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="ap" prefHeight="683.0" prefWidth="424.0" style="-fx-background-color: #d7f8e6;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelsia.officialReceiptController">
+   <children>
+      <Text layoutX="28.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ROOM PRICE:">
+         <font>
+            <Font name="Cerebri Sans Pro Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="28.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CUSTOMER NAME:">
+         <font>
+            <Font name="Cerebri Sans Pro Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="168.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE:">
+         <font>
+            <Font name="CerebriSansPro-ExtraBold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="FullNameText" layoutX="245.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Label">
+         <font>
+            <Font name="CerebriSansPro-ExtraBold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="27.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHECK IN DATE:">
+         <font>
+            <Font name="Cerebri Sans Pro Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="roomTypeConfirm" layoutX="245.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Label">
+         <font>
+            <Font name="CerebriSansPro-ExtraBold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="130.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NiceHotel">
+         <font>
+            <Font name="Cerebri Sans Pro Bold" size="33.0" />
+         </font>
+      </Text>
+      <Text layoutX="27.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHECK OUT DATE:">
+         <font>
+            <Font name="Cerebri Sans Pro Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="28.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ROOM TYPE:">
+         <font>
+            <Font name="Cerebri Sans Pro Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="currentDate" layoutX="213.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Label">
+         <font>
+            <Font name="Cerebri Sans Pro Bold" size="15.0" />
+         </font>
+      </Text>
+      <Line endX="297.0" layoutX="108.0" layoutY="119.0" startX="-89.0" strokeWidth="4.0" />
+      <Text layoutX="27.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL HOURS:">
+         <font>
+            <Font name="Cerebri Sans Pro Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="totalHours" layoutX="244.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Label">
+         <font>
+            <Font name="CerebriSansPro-ExtraBold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="25.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EXTENDED HOURS:" textAlignment="CENTER" wrappingWidth="110.0">
+         <font>
+            <Font name="Cerebri Sans Pro Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="29.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL BILL:">
+         <font>
+            <Font name="Cerebri Sans Pro Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="roomPriceCnfrm" layoutX="245.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Label">
+         <font>
+            <Font name="CerebriSansPro-ExtraBold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="checkInDate" layoutX="245.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Label">
+         <font>
+            <Font name="CerebriSansPro-ExtraBold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="checkOutDate" layoutX="245.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="------">
+         <font>
+            <Font name="CerebriSansPro-ExtraBold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="extraHours" layoutX="245.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="------">
+         <font>
+            <Font name="CerebriSansPro-ExtraBold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="totalBill" layoutX="245.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Label">
+         <font>
+            <Font name="CerebriSansPro-ExtraBold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="30.0" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AMOUNT PAID:">
+         <font>
+            <Font name="Cerebri Sans Pro Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="totalAmountPaid" layoutX="245.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Label">
+         <font>
+            <Font name="CerebriSansPro-ExtraBold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="45.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="673 Quirino Highway, San Bartolome, Novaliches, Quezon City" textAlignment="CENTER" />
+      <Text layoutX="169.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(02) 8806-3049" />
+      <Text layoutX="30.0" layoutY="575.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHANGE:">
+         <font>
+            <Font name="Cerebri Sans Pro Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="chnge" layoutX="245.0" layoutY="574.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Label">
+         <font>
+            <Font name="CerebriSansPro-ExtraBold" size="15.0" />
+         </font>
+      </Text>
+      <Line endX="297.0" layoutX="108.0" layoutY="601.0" startX="-89.0" strokeWidth="4.0" />
+      <Text layoutX="133.0" layoutY="647.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thank you!">
+         <font>
+            <Font name="Calibri Italic" size="33.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

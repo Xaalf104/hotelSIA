@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelsia.ReservationController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="976.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane prefHeight="691.0" prefWidth="1087.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutY="18.0" prefHeight="56.0" prefWidth="780.0" style="-fx-background-color: #A5F0C5;" AnchorPane.bottomAnchor="603.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Text layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search:">
+                           <font>
+                              <Font name="CerebriSansPro-ExtraBold" size="19.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="searchField" layoutX="93.0" layoutY="17.0" prefHeight="25.0" prefWidth="175.0" promptText="Search..." style="-fx-background-color: #DDF3E6; -fx-background-radius: 30;" />
+                        <Button fx:id="checkInButton" layoutX="278.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#checkIn" prefHeight="25.0" prefWidth="72.0" stylesheets="@buttons.css" text="Check In">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="CerebriSansPro-ExtraBold" size="12.0" />
+                           </font>
+                        </Button>
+                        <ImageView fx:id="refreshBtn" accessibleHelp="Refresh" accessibleText="Refresh" fitHeight="24.0" fitWidth="23.0" layoutX="939.0" layoutY="18.0" onMouseClicked="#refreshTable" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="14.0">
+                           <image>
+                              <Image url="@refreshicon.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fx:id="export" accessibleHelp="Archive" accessibleText="Archive" fitHeight="24.0" fitWidth="23.0" layoutX="905.0" layoutY="18.0" onMouseClicked="#ifArchive" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="48.0">
+                           <image>
+                              <Image url="@archive.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="Approve" layoutX="823.0" layoutY="17.0" mnemonicParsing="false" onAction="#approveInQueue" prefHeight="25.0" prefWidth="72.0" stylesheets="@buttons.css" text="Approve" AnchorPane.rightAnchor="81.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="CerebriSansPro-ExtraBold" size="12.0" />
+                           </font>
+                        </Button>
+                        <CheckBox fx:id="selectAllCheckBox" layoutX="360.0" layoutY="21.0" mnemonicParsing="false" text="Select All" AnchorPane.leftAnchor="360.0">
+                           <font>
+                              <Font name="CerebriSansPro-ExtraBold" size="12.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </AnchorPane>
+                  <StackPane layoutY="56.0" prefHeight="603.0" prefWidth="976.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.0">
+                     <children>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
+                           <content>
+                              <GridPane prefHeight="608.0" prefWidth="810.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TableView fx:id="reservationListTableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#getItem" prefHeight="601.0" prefWidth="974.0" style="-fx-border-color: white;" stylesheets="@tableview2.css" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                       <columns>
+                                          <TableColumn fx:id="userid" prefWidth="99.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="User ID" />
+                                          <TableColumn fx:id="reservationID" prefWidth="99.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Reservation ID" />
+                                          <TableColumn fx:id="roomNo" prefWidth="99.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Room No" />
+                                          <TableColumn fx:id="roomType" prefWidth="110.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Room Type" />
+                                          <TableColumn fx:id="firstName" minWidth="55.0" prefWidth="150.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="First Name" />
+                                          <TableColumn fx:id="middleName" minWidth="55.0" prefWidth="150.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Middle Name" />
+                                          <TableColumn fx:id="lastName" minWidth="55.0" prefWidth="150.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Last Name" />
+                                          <TableColumn fx:id="suffixColumn" minWidth="55.0" prefWidth="150.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Suffix" />
+                                          <TableColumn fx:id="headcount" minWidth="55.0" prefWidth="88.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Head Count" />
+                                          <TableColumn fx:id="usageHours" minWidth="0.0" prefWidth="98.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Hours" />
+                                          <TableColumn fx:id="roomPrice" prefWidth="89.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Room Price" />
+                                          <TableColumn fx:id="initialPay" prefWidth="86.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Initial Pay" />
+                                          <TableColumn fx:id="balance" prefWidth="86.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Balance" />
+                                          <TableColumn fx:id="MOP" prefWidth="82.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="MOP" />
+                                          <TableColumn fx:id="RefNo" prefWidth="109.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Ref No" />
+                                          <TableColumn fx:id="dateReservation" minWidth="0.0" prefWidth="76.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Date Reserved" />
+                                          <TableColumn fx:id="datePaid" minWidth="0.0" prefWidth="75.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Date Paid" />
+                                          <TableColumn fx:id="remarks" minWidth="0.0" prefWidth="75.0" style="-fx-border-color: #51E28F; -fx-alignment: CENTER;" text="Remarks" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
